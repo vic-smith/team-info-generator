@@ -1,6 +1,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateHTML = require("./generateHTML");
+let employees = [];
 
 // function to create inquirer prompts
 const getData = () => {
@@ -80,7 +81,7 @@ const addEngInt = () => {
       } else if (response.engineerIntern === "Intern") {
         intern();
       } else {
-        writeFile();
+        writeFile(data);
         return;
       }
     });
@@ -147,7 +148,8 @@ const engineer = () => {
     });
 };
 
-const intern = () => {
+const intern = (employees) => {
+  Intern = [];
   return inquirer
     .prompt([
       {
@@ -203,7 +205,8 @@ const intern = () => {
         },
       },
     ])
-    .then(() => {
+    .then((data) => {
+      employees.push(new Intern(data));
       addEngInt();
     });
 };

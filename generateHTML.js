@@ -1,6 +1,30 @@
 
 // function to create manager card
-const generateManCard = () => {
+const generateManCard = (data) => {
+  return `
+  <h3 class ="card-header">${data.name}</h3>
+  <h4 class = "title">Manager</h4>
+  <ul class = "data">
+  <li>ID: ${data.id}</li>
+  <li>Email: ${data.email} </li>    
+  <li>Office number: ${data.office}</li> 
+</div>
+  `;
+}
+
+const generateManCard = (data) => {
+  return `
+  <h3 class ="card-header">${data.name}</h3>
+  <h4 class = "title">Manager</h4>
+  <ul class = "data">
+  <li>ID: ${data.id}</li>
+  <li>Email: ${data.email} </li>    
+  <li>Office number: ${data.office}</li> 
+</div>
+  `;
+}
+
+const generateManCard = (data) => {
   return `
   <h3 class ="card-header">${data.name}</h3>
   <h4 class = "title">Manager</h4>
@@ -40,7 +64,7 @@ function generateHTML(data) {
   <main class = "container">
     <section>
       <div class = "card">
-     ${generateManCard()}
+     ${generateManCard(data)}
     </section>
   </main>
 
