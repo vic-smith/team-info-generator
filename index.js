@@ -2,7 +2,7 @@ const inquirer = require("inquirer");
 const fs = require("fs");
 
 // function to create inquirer prompts
-const getData = (data) => {
+const getData = () => {
   return inquirer
     .prompt([
       {
@@ -63,7 +63,7 @@ const getData = (data) => {
     });
 };
 
-const addEngInt = (data) => {
+const addEngInt = () => {
   return inquirer
     .prompt([
       {
@@ -84,7 +84,7 @@ const addEngInt = (data) => {
     });
 };
 
-const engineer = (data) => {
+const engineer = () => {
   return inquirer.prompt([
     {
       type: "input",
@@ -144,7 +144,7 @@ const engineer = (data) => {
   });
 };
 
-const intern = (data) => {
+const intern = () => {
   return inquirer.prompt([
     {
       type: "input",
