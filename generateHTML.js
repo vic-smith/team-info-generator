@@ -1,3 +1,21 @@
+
+// function to create manager card
+const generateManCard = () => {
+  return `
+  <h3 class ="card-header">Victor</h3>
+  <h4 class = "title">Manager</h4>
+  <ul class = "data">
+  <li>ID: srghtd</li>
+  <li>Email: tgrhdrfgh </li>    
+  <li>Office number: 123</li> 
+</div>
+  `;
+}
+
+
+
+
+//function to create HTML
 function generateHTML(data) {
   return `
   <!DOCTYPE html> 
@@ -22,13 +40,7 @@ function generateHTML(data) {
   <main class = "container">
     <section>
       <div class = "card">
-      <h3 class ="card-header">Victor</h3>
-        <h4 class = "title">Manager</h4>
-        <ul class = "data">
-        <li>ID: srghtd</li>
-        <li>Email: tgrhdrfgh </li>    
-        <li>Office number: 123</li> 
-      </div>
+     ${generateManCard()}
     </section>
   </main>
 
