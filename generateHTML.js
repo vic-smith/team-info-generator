@@ -1,37 +1,40 @@
 
 // function to create manager card
-const generateManCard = (data) => {
+const generateManCard = () => {
   return `
-  <h3 class ="card-header">${data.name}</h3>
+  <div class = "card">
+  <h3 class ="card-header">John</h3>
   <h4 class = "title">Manager</h4>
   <ul class = "data">
-  <li>ID: ${data.id}</li>
-  <li>Email: ${data.email} </li>    
-  <li>Office number: ${data.office}</li> 
+  <li>ID: 111</li>
+  <li>Email: john@email.com </li>    
+  <li>Office number: 222</li> 
 </div>
   `;
 }
 
-const generateManCard = (data) => {
+const generateEngCard = () => {
   return `
-  <h3 class ="card-header">${data.name}</h3>
-  <h4 class = "title">Manager</h4>
+  <div class = "card">
+  <h3 class ="card-header">Jack</h3>
+  <h4 class = "title">Engineer</h4>
   <ul class = "data">
-  <li>ID: ${data.id}</li>
-  <li>Email: ${data.email} </li>    
-  <li>Office number: ${data.office}</li> 
+  <li>ID: 112</li>
+  <li>Email: jack@email.com </li>    
+  <li>GitHub: jack@github</li> 
 </div>
   `;
 }
 
-const generateManCard = (data) => {
+const generateIntCard = () => {
   return `
-  <h3 class ="card-header">${data.name}</h3>
-  <h4 class = "title">Manager</h4>
+  <div class = "card">
+  <h3 class ="card-header">Joe</h3>
+  <h4 class = "title">Intern</h4>
   <ul class = "data">
-  <li>ID: ${data.id}</li>
-  <li>Email: ${data.email} </li>    
-  <li>Office number: ${data.office}</li> 
+  <li>ID: 113</li>
+  <li>Email: joe@email.com </li>    
+  <li>School: Trilogy</li> 
 </div>
   `;
 }
@@ -62,10 +65,11 @@ function generateHTML(data) {
   </header>
 
   <main class = "container">
-    <section>
-      <div class = "card">
+      
      ${generateManCard(data)}
-    </section>
+     ${generateEngCard(data)}
+     ${generateIntCard(data)}
+    
   </main>
 
   <footer>

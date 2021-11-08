@@ -81,7 +81,7 @@ const addEngInt = () => {
       } else if (response.engineerIntern === "Intern") {
         intern();
       } else {
-        writeFile(data);
+        writeFile();
         return;
       }
     });
@@ -148,8 +148,8 @@ const engineer = () => {
     });
 };
 
-const intern = (employees) => {
-  Intern = [];
+const intern = () => {
+  //Intern = [];
   return inquirer
     .prompt([
       {
@@ -205,8 +205,8 @@ const intern = (employees) => {
         },
       },
     ])
-    .then((data) => {
-      employees.push(new Intern(data));
+    .then(() => {
+      //employees.push(new Intern(data));
       addEngInt();
     });
 };
